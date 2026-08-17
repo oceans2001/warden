@@ -17,7 +17,7 @@ type FlowEvent struct {
 }
 
 func StartStream(store *Store) {
-	conn, err := grpc.NewClient("localhost:4245", grpc.WithTransportCredentials(insecure.NewCredentials()))
+	conn, err := grpc.NewClient("hubble-relay.kube-system.svc.cluster.local:80", grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		log.Println("Failed to connect to Hubble Relay:", err)
 		return
