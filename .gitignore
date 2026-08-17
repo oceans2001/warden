@@ -1,0 +1,17 @@
+# Binaries
+/warden-api
+*.exe
+
+# Go build artifacts
+*.test
+*.out
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Local dev cluster config
+kind-config.yaml
